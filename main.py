@@ -61,7 +61,7 @@ def bruter(words: queue.Queue):
             print(f'[+] Found: {r.status_code} : {url}')
             record('found', url)
         elif r.status_code == 404:
-            print(f'[-] Not found: {url} {words.qsize()}')
+            print(f'[-] Not found: {url}')
             record('notfound', url)
         elif r.status_code == 403:
             print(f'[+] Found, but forbidden: {url} (403 status code)')
